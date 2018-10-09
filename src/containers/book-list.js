@@ -18,8 +18,7 @@ class BookList extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Active book: {this.props.activeBook ? this.props.activeBook.title : 'none'}</h1>
+      <div>        
         <ul className="list-group col-sm-4">
           {this.renderList()}
         </ul>
