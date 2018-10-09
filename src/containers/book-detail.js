@@ -3,10 +3,14 @@ import { connect } from 'react-redux';
 
 class BookDetail extends Component {
   render() {
+    if (!this.props.book) {
+      return <div></div>;
+    }
+
     return (
       <div>
-      <h1>Book Detail!</h1>
-      <h1>{this.props.book ? this.props.book.title : 'none'}</h1>
+      <h3>Book detail for:</h3>
+        <div>{this.props.book.title}</div>
       </div>
     )
   }
