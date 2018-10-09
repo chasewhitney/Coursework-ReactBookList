@@ -18,9 +18,12 @@ class BookList extends Component {
 
   render() {
     return (
-      <ul className="list-group col-sm-4">
-        {this.renderList()}
-      </ul>
+      <div>
+        <h1>Active book: {this.props.activeBook ? this.props.activeBook.title : 'none'}</h1>
+        <ul className="list-group col-sm-4">
+          {this.renderList()}
+        </ul>
+      </div>
     )
   }
 }
@@ -30,6 +33,7 @@ function mapStateToProps(state) {
   // as props inside of BookList
   return {
     books: state.books,
+    activeBook: state.activeBook,
   };
 }
 
